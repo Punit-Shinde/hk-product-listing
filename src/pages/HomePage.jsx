@@ -1,17 +1,20 @@
 import React from "react";
-import NavBar from "../components/NavBar";
-import SearchBar from "../components/SearchBar";
-import AddProduct from "../components/AddProduct";
-import ProductList from "../components/ProductList";
+import { useNavigate } from "react-router-dom";
+
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("authToken");
+
+    navigate("/");
+  };
+
   return (
-    <>
-      <div>Home Page</div>
-      <NavBar />
-      <SearchBar />
-      <AddProduct />
-      <ProductList />
-    </>
+    <div>
+      <h2>Home Page</h2>
+      <button onClick={handleLogout}>Logout</button>
+    </div>
   );
 };
 
