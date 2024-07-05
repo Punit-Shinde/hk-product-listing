@@ -21,7 +21,7 @@ const LoginPage = () => {
 
         localStorage.setItem("authToken", token);
 
-        navigate("/home")
+        navigate("/home");
         console.log("Login successful! Token saved to localStorage.");
       } else {
         console.log("Login failed. Invalid credentials.");
@@ -32,8 +32,8 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
-      <div className="w-[400px] flex flex-col items-center justify-center m-5 p-5 border-2 rounded-lg">
+    <div className="w-screen h-screen flex justify-center items-center bg-slate-400">
+      <div className="w-[400px] flex flex-col items-center justify-center m-5 p-5 border-2 rounded-lg bg-slate-200">
         <h2 className="text-2xl font-semibold mb-4 ">Login Page</h2>
         <input
           type="email"
