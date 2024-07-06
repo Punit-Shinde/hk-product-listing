@@ -16,8 +16,8 @@ const App = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<LoginPage />} />
-          <Route path="/home" element={isAuthenticated && <HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={isAuthenticated ? <HomePage /> : <Navigate to="/login"/>} />
           <Route path="*" element={<NoPageFound />} />
         </Routes>
       </Router>

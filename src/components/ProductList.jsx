@@ -3,7 +3,7 @@ import NotFound from "../assets/nopage.png";
 
 const ProductList = ({ products, onRemoveProduct }) => {
   return (
-    <div className="m-5 gap-2 font-semibold">
+    <div className="m-24 gap-2 font-semibold">
       {products.length === 0 ? (
         <div className="flex flex-col items-center m-7">
           <img

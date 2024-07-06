@@ -22,7 +22,7 @@ const LoginPage = () => {
 
         localStorage.setItem("authToken", token);
 
-        navigate("/home");
+        navigate("/");
         console.log("Login successful! Token saved to localStorage.");
       } else {
         console.log("Login failed. Invalid credentials.");

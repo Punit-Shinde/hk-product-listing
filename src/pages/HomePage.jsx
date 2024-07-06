@@ -11,7 +11,7 @@ const HomePage = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("authToken");
-    navigate("/");
+    navigate("/login");
   };
 
   const handleAddProduct = (newProduct) => {
