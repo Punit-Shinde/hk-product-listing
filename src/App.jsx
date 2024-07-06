@@ -13,19 +13,15 @@ const App = () => {
   const isAuthenticated = !!localStorage.getItem("authToken");
 
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route exact path="/login" element={<LoginPage />} />
-          <Route
-            extact
-            path="/"
-            element={isAuthenticated ? <HomePage /> : <Navigate to="/login" />}
-          />
-          <Route path="*" element={<NoPageFound />} />
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={isAuthenticated ? <HomePage /> : <LoginPage />}
+        />
+        <Route path="*" element={<NoPageFound />} />
+      </Routes>
+    </Router>
   );
 };
 
