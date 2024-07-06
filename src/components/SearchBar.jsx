@@ -18,7 +18,7 @@ const SearchBar = ({ onSearch }) => {
           onChange={(e) => setSearchQuery(e.target.value)}
           className="outline-none"
         />
-        <FaSearch onClick={handleSearch} className="text-xl"/>
+        <FaSearch onClick={handleSearch} className="text-xl hover:scale-125 cursor-pointer duration-500"/>
       </div>
       
     </div>

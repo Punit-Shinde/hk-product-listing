@@ -5,6 +5,7 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
   const handleLogin = async () => {
     try {
       const response = await fetch("https://reqres.in/api/login", {
@@ -32,9 +33,9 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-slate-400">
-      <div className="w-[400px] flex flex-col items-center justify-center m-5 p-5 border-2 rounded-lg bg-slate-200">
-        <h2 className="text-2xl font-semibold mb-4 ">Login Page</h2>
+    <div className="w-screen h-screen flex justify-center items-center bg-slate-300">
+      <div className="w-[400px] flex flex-col items-center justify-center m-5 p-5 border-2 rounded-lg bg-slate-200 drop-shadow-xl">
+        <h2 className="text-2xl font-semibold mb-4 ">Login Form</h2>
         <input
           type="email"
           placeholder="Email"
@@ -51,7 +52,7 @@ const LoginPage = () => {
         />
         <button
           onClick={handleLogin}
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 duration-500"
         >
           Login
         </button>

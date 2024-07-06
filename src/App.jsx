@@ -11,9 +11,9 @@ import NoPageFound from "./pages/NoPageFound";
 
 const App = () => {
   const isAuthenticated = !!localStorage.getItem("authToken");
-  
+
   return (
-    <div className="">
+    <>
       <Router>
         <Routes>
           <Route path="/" element={<LoginPage />} />
@@ -24,7 +24,7 @@ const App = () => {
           <Route path="*" element={<NoPageFound />} />
         </Routes>
       </Router>
-    </div>
+    </>
   );
 };
 

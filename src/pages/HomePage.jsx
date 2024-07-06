@@ -36,10 +36,12 @@ const HomePage = () => {
   return (
     <div className="flex flex-col gap-5 bg-slate-200 h-screen">
       <SearchBar onSearch={handleSearch} />
-      <AddProduct products={products} onAddProduct={handleAddProduct} />
-      <ProductList products={products} />
+      <div className="md:mx-80">
+        <AddProduct products={products} onAddProduct={handleAddProduct} />
+        <ProductList products={products} />
+      </div>
       <MdLogout
-        className="absolute top-8 right-5 text-xl text-white font-semibold"
+        className="absolute top-7 right-5 text-4xl text-white border-2 w-[35px] h-[35px] p-1 rounded-full hover:scale-125 cursor-pointer bg-blue-600 duration-500"
         onClick={handleLogout}
       />
     </div>

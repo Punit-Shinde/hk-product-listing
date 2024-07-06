@@ -43,7 +43,7 @@ const AddProduct = ({ products, onAddProduct }) => {
       />
       <MdAddBox
         onClick={handleAddProduct}
-        className="text-4xl text-emerald-500"
+        className="text-4xl text-emerald-500 hover:scale-125 cursor-pointer duration-500"
       />
     </div>
   );
